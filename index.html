@@ -369,7 +369,7 @@ tbody tr:hover{background:rgba(59,130,246,0.08);box-shadow:inset 0 0 20px rgba(5
 
     <div class="card glass-card species-card" style="margin-bottom:var(--gap)">
       <h3>Espécies Nativas Predominantes — Destaque Dinâmico</h3>
-      <div class="subtitle">Angico, Aroeira e Cajueiro — espécies com maior representatividade do plantio compensatório · destaque automático alternado</div>
+      <div class="subtitle">Angico, Aroeira e Jurema-Preta — espécies com maior representatividade do plantio compensatório · destaque automático alternado</div>
       <div class="showcase-grid" id="speciesShowcase"></div>
     </div>
 
@@ -457,8 +457,8 @@ tbody tr:hover{background:rgba(59,130,246,0.08);box-shadow:inset 0 0 20px rgba(5
 
     <div class="card glass-card species-card pest-panel" style="margin-bottom:var(--gap)">
       <h3 style="display:flex;align-items:center;gap:10px"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" style="color:var(--success)"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg> Registro de Pragas / Fitossanidade — Campanha Agosto/2026</h3>
-      <div class="subtitle">Monitoramento fitossanitário contínuo · sem ocorrência registrada de pragas no período (checagem visual em campo: desfolhação, teias, ovos e roedores)</div>
-      <div class="alert-banner ok"><span class="pulse-dot"></span> Alerta Fitossanitário — Nenhuma Praga Detectada na Campanha</div>
+      <div class="subtitle">Monitoramento fitossanitário contínuo · gafanhoto detectado após a implantação (Abr–Mai), hoje sob controle; demais pragas sem registros na campanha (checagem visual: desfolhação, teias, ovos e roedores)</div>
+      <div class="alert-banner ok"><span class="pulse-dot"></span> Alerta Fitossanitário — Gafanhoto Detectado Pós-Implantação, Sob Controle Atual (Sem Novos Registros) · Demais Pragas Não Detectadas</div>
       <div class="pest-grid" id="pestGridJanio"></div>
     </div>
 
@@ -743,7 +743,7 @@ document.getElementById('statPercentual').textContent = percentual + '%';
 const SPECIES_JANIO=[
   {img:'assets/especies/angico.webp',name:'Angico',sci:'Anadenanthera colubrina'},
   {img:'assets/especies/aroeira.webp',name:'Aroeira',sci:'Myracrodruon urundeuva'},
-  {img:'assets/especies/cajueiro.webp',name:'Cajueiro',sci:'Anacardium occidentale'}
+  {img:'assets/especies/jurema-preta.jpg',name:'Jurema-Preta',sci:'Mimosa tenuiflora'}
 ];
 let spIdx=0;
 function setSpeciesSpotlight(idx){
@@ -770,7 +770,7 @@ setInterval(()=>{
 
 // Pragas — NÃO detectadas na campanha Agosto/2026
 const PESTS_JANIO=[
-  {img:'assets/pragas/gafanhoto.jpg',name:'Gafanhotos',sci:'Orthoptera · Acrididae',status:'Não detectado',cls:'ok',alt:'Gafanhotos — não detectados'},
+  {img:'assets/pragas/gafanhoto.jpg',name:'Gafanhotos',sci:'Orthoptera · Acrididae',status:'Sob controle — pós-implantação',cls:'watch',alt:'Gafanhotos — detectados após a implantação, hoje sob controle'},
   {img:'assets/pragas/lagarta.webp',name:'Lagartas',sci:'Lepidoptera (desfolhadores)',status:'Não detectado',cls:'ok',alt:'Lagartas — não detectadas'},
   {img:'assets/pragas/bicho-pau.webp',name:'Bicho-pau',sci:'Phasmatodea',status:'Não detectado',cls:'ok',alt:'Bicho-pau — não detectado'},
   {img:'assets/pragas/prea-moco.jpg',name:'Preá & Mocó',sci:'Rodentia · Caviidae (nativos)',status:'Não detectado',cls:'ok',alt:'Preá e Mocó — não detectados'},
