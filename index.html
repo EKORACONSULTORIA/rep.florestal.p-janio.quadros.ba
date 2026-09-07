@@ -219,7 +219,7 @@ tbody tr:hover{background:rgba(59,130,246,0.08);box-shadow:inset 0 0 20px rgba(5
   box-shadow:0 0 18px rgba(16,185,129,.18);}
 .pulse-dot{width:10px;height:10px;border-radius:50%;background:currentColor;box-shadow:0 0 12px currentColor;
   animation:pulse 1.2s infinite;flex-shrink:0;}
-.pest-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+.pest-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px;}
 .pest-card{background:var(--card);border:1px solid var(--glass-border);border-radius:14px;overflow:hidden;
   backdrop-filter:blur(12px);transition:all .3s ease;}
 .pest-card:hover{transform:translateY(-4px);}
@@ -746,7 +746,8 @@ const PESTS_JANIO=[
   {img:'assets/pragas/gafanhoto.jpg',name:'Gafanhotos',sci:'Orthoptera · Acrididae',status:'Não detectado',cls:'ok',alt:'Gafanhotos — não detectados'},
   {img:'assets/pragas/lagarta.webp',name:'Lagartas',sci:'Lepidoptera (desfolhadores)',status:'Não detectado',cls:'ok',alt:'Lagartas — não detectadas'},
   {img:'assets/pragas/bicho-pau.webp',name:'Bicho-pau',sci:'Phasmatodea',status:'Não detectado',cls:'ok',alt:'Bicho-pau — não detectado'},
-  {img:'assets/pragas/prea-moco.jpg',name:'Preá & Mocó',sci:'Rodentia · Caviidae (nativos)',status:'Não detectado',cls:'ok',alt:'Preá e Mocó — não detectados'}
+  {img:'assets/pragas/prea-moco.jpg',name:'Preá & Mocó',sci:'Rodentia · Caviidae (nativos)',status:'Não detectado',cls:'ok',alt:'Preá e Mocó — não detectados'},
+  {img:'assets/pragas/formiga-cortadeira.webp',name:'Formiga Cortadeira',sci:'Atta spp. · Acromyrmex spp.',status:'Não detectado',cls:'ok',alt:'Formiga cortadeira — não detectada'}
 ];
 (function renderPestGrid(){
   const box=document.getElementById('pestGridJanio');
