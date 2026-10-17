@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gestão de Ativos Ambientais — Reposição Florestal | UFV Apolo Presidente Jânio Quadros — Agosto/2026</title>
+<title>Gestão de Ativos Ambientais — Reposição Florestal | UFV Apolo Presidente Jânio Quadros — Last data: Junho - Setembro. Dados atualizados: Outubro/2026</title>
 <meta name="description" content="Gestão de ativos ambientais de usinas fotovoltaicas: monitoramento da reposição florestal (plantio compensatório) — UFV Apolo Presidente Jânio Quadros–BA (Fazenda Caraíbas). Campanha Agosto/2026 · Bragagnoli Ambiental / EKORA Consultoria Ambiental · resp. técnico Eng. Railson N. de Arruda, CREA-PB.">
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.1"></script>
 <style>
@@ -348,14 +348,14 @@ tbody tr:hover{background:rgba(59,130,246,0.08);box-shadow:inset 0 0 20px rgba(5
         </table>
       </div>
       <div class="card">
-        <h3>Painel Comparativo — Junho × Julho × Agosto/2026</h3>
+        <h3>Painel Comparativo — Junho × Julho × Agosto × Setembro × Outubro /2026</h3>
         <div class="subtitle">Tabela 6.7 do Relatório Técnico</div>
         <canvas id="chartComparativo"></canvas>
       </div>
     </div>
 
     <div class="card">
-      <h3>Gráfico de Desempenho Ambiental — Agosto/2026</h3>
+      <h3>Gráfico de Desempenho Ambiental — Setembro/2026</h3>
       <div class="subtitle">Sobrevivência, irrigação, cercamento, fitossanidade e controle de erosão em 100%</div>
       <canvas id="chartDesempenho"></canvas>
     </div>
@@ -387,10 +387,12 @@ tbody tr:hover{background:rgba(59,130,246,0.08);box-shadow:inset 0 0 20px rgba(5
       </div>
       <div class="card">
         <h3>Desenvolvimento Vegetativo</h3>
-        <div class="subtitle">Avaliação de campo — Julho–Agosto/2026</div>
+        <div class="subtitle">Avaliação de campo — Julho–Agosto-Setembro-Outubro/2026</div>
         <p style="font-size:13px;"><span class="pill green">Emissão de novas folhas</span></p>
         <p style="font-size:13px;"><span class="pill green">Incremento de biomassa aérea</span></p>
         <p style="font-size:13px;"><span class="pill green">Formação progressiva da copa</span></p>
+        <p style="font-size:13px;"><span class="pill green">Desenvolvimento normal</span></p>
+        <p style="font-size:13px;"><span class="pill green">Sem riscos/Sem impactos</span></p>
       </div>
       <div class="card">
         <h3>Campanhas de Monitoramento</h3>
@@ -403,10 +405,10 @@ tbody tr:hover{background:rgba(59,130,246,0.08);box-shadow:inset 0 0 20px rgba(5
     </div>
 
     <div class="card">
-      <h3>Painel Comparativo de Indicadores — Junho × Julho × Agosto/2026</h3>
+      <h3>Painel Comparativo de Indicadores — Junho × Julho × Agosto × Setembro × Outubro /2026</h3>
       <div class="subtitle">Tabela 6.7 do Relatório Técnico, com extensão a agosto</div>
       <table>
-        <thead><tr><th>Indicador</th><th>Junho</th><th>Julho</th><th>Agosto</th></tr></thead>
+        <thead><tr><th>Indicador</th><th>Junho</th><th>Julho</th><th>Agosto</th><th>Setembro</th><th>Outubro</th></tr></thead>
         <tbody id="tblComparacao"></tbody>
       </table>
     </div>
@@ -433,7 +435,7 @@ tbody tr:hover{background:rgba(59,130,246,0.08);box-shadow:inset 0 0 20px rgba(5
     </div>
 
     <div class="card">
-      <h3>Painel de Indicadores Ambientais — Julho–Agosto/2026</h3>
+      <h3>Painel de Indicadores Ambientais — Julho–Agosto-Setembro-Outubro/2026</h3>
       <div class="subtitle">Tabela 6.5.1 do Relatório Técnico</div>
       <table>
         <thead><tr><th>Indicador Estratégico</th><th>Resultado</th></tr></thead>
@@ -484,7 +486,7 @@ tbody tr:hover{background:rgba(59,130,246,0.08);box-shadow:inset 0 0 20px rgba(5
 
     <div class="grid-2">
       <div class="card">
-        <h3>Avaliação Fitossanitária — Julho–Agosto/2026</h3>
+        <h3>Avaliação Fitossanitária — Julho–Agosto-Setembro-Outubro/2026</h3>
         <div class="subtitle">Item 6.2 do Relatório Técnico</div>
         <ul style="font-size:13px;color:var(--text-sec)">
           <li>Baixa incidência de herbivoria por gafanhotos, pontual entre abril e maio</li>
@@ -492,6 +494,7 @@ tbody tr:hover{background:rgba(59,130,246,0.08);box-shadow:inset 0 0 20px rgba(5
           <li>Sem comprometimento do desenvolvimento vegetativo ou da sobrevivência</li>
           <li>Sem sintomas de doenças fúngicas ou bacterianas</li>
           <li>Sem deficiências nutricionais relevantes</li>
+          <li>Espécies correspondem positivamente até data atual</li>
           <li>Sem sintomas de estresse hídrico — elevada disponibilidade de água no período chuvoso</li>
         </ul>
       </div>
@@ -609,7 +612,7 @@ const indicadoresMonitoramento = [
 document.getElementById('tblIndicadoresMonitoramento').innerHTML = indicadoresMonitoramento.map(r=>
  `<tr><td>${r[0]}</td><td><span class="pill ${r[2]}">${r[1]}</span></td></tr>`).join('');
 
-// Chart: Painel comparativo Abril x Maio x Junho (percentuais)
+// Chart: Painel comparativo Abril x Maio x Junho X Agosto X Setembro X Outubro (percentuais)
 new Chart(document.getElementById('chartComparativo'), {
   type:'bar',
   data:{
@@ -617,7 +620,9 @@ new Chart(document.getElementById('chartComparativo'), {
     datasets:[
       {label:'Junho', data:[100,0,98], backgroundColor:BLUE, borderRadius:6},
       {label:'Julho', data:[100,0,100], backgroundColor:GREEN_L, borderRadius:6},
-      {label:'Agosto', data:[100,0,100], backgroundColor:GREEN, borderRadius:6}
+      {label:'Agosto', data:[100,0,100], backgroundColor:GREEN, borderRadius:6},
+      {label:'Setembro', data:[100,0,100], backgroundColor:GREEN, borderRadius:6},
+      {label:'Outrubro', data:[100,0,100], backgroundColor:GREEN, borderRadius:6}
     ]
   },
   options:{responsive:true, scales:{y:{beginAtZero:true,max:110,ticks:{callback:v=>v+'%'}}}, plugins:{legend:{position:'bottom'}}}
@@ -643,7 +648,9 @@ const timeline = [
  ['Monitoramento 05 — Junho/2026','✓ Concluído'],
  ['Monitoramento 06 — Julho/2026','✓ Concluído'],
  ['Monitoramento 07 — Agosto/2026','✓ Concluído — presente relatório'],
- ['Monitoramento 08 — Setembro/2026','Programado'],
+ ['Monitoramento 08 — Agosto/2026','✓ Concluído'],
+ ['Monitoramento 09 — Setembro/2026','✓ Concluído'],
+ ['Monitoramento 09 — Outubro/2026','Analisando'],
 ];
 document.getElementById('tblTimeline').innerHTML = timeline.map(r=>
  `<tr><td><b>${r[0]}</b></td><td>${r[1]}</td></tr>`).join('');
@@ -719,7 +726,7 @@ document.getElementById('tblAcoes').innerHTML = acoes.map(r=>
 // Cronograma — periodicidade mensal confirmada, a partir de Fevereiro/2026
 const MESES = ['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'];
 const TOTAL_CAMPANHAS = 24;
-const CAMPANHAS_CONCLUIDAS = 7; // Fevereiro a Agosto/2026
+const CAMPANHAS_CONCLUIDAS = 8; // Fevereiro a Setembro/2026
 const startMonth = 1; // Fevereiro (índice 1)
 const startYear = 2026;
 const cronograma = [];
@@ -768,7 +775,7 @@ setInterval(()=>{
   setSpeciesSpotlight((spIdx+1)%items.length);
 },3200);
 
-// Pragas — NÃO detectadas na campanha Agosto/2026
+// Pragas — NÃO detectadas na campanha Junho-Julho-Agosto-Setembro-Outubro/2026
 const PESTS_JANIO=[
   {img:'assets/pragas/gafanhoto.jpg',name:'Gafanhotos',sci:'Orthoptera · Acrididae',status:'Sob controle — pós-implantação',cls:'watch',alt:'Gafanhotos — detectados após a implantação, hoje sob controle'},
   {img:'assets/pragas/lagarta.webp',name:'Lagartas',sci:'Lepidoptera (desfolhadores)',status:'Não detectado',cls:'ok',alt:'Lagartas — não detectadas'},
