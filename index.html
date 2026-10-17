@@ -311,21 +311,81 @@ tbody tr:hover{background:rgba(59,130,246,0.08);box-shadow:inset 0 0 20px rgba(5
 </head>
 <body>
 <div class="container">
-  <div class="header">
-    <div class="header-left">
-      <img class="logo" src="assets/logo-ekora.jpg" alt="EKORA Consultoria Ambiental">
-      <div class="header-title-block">
-        <div class="brand-sub">EKORA Consultoria Ambiental · Bragagnoli Ambiental</div>
-        <h1><svg class="ico ico-lg" viewBox="0 0 24 24" aria-hidden="true"><path d="M11 20A7 7 0 0 1 4 13C4 8 9 4 20 4c0 11-4 16-9 16z"/><path d="M4 13C7 10 12 8 16 9"/></svg> Dashboard de Monitoramento da Reposição Florestal</h1>
-        <p>Gestão de Ativos Ambientais · plantio compensatório · Empreendimento: <b>UFV Apolo Presidente Jânio Quadros — BA</b> (Fazenda Caraíbas) · Mês de Referência: <b>Outubro/2026</b> · Bragagnoli Ambiental (CTF/AIDA 8805586)</p>
-        <div class="tag-row">
-          <span class="badge">Diretor Técnico: Railson N. de Arruda — CREA-PB RNP 1619008858</span>
-          <span class="badge">Área de Plantio: 0,1125 ha</span>
-          <span class="badge">125 mudas implantadas</span>
-          <span class="badge">UFV Apolo · Energia Fotovoltaica</span>
-        </div>
+ 
+<div class="header">
+  <div class="header-left">
+    <img
+      class="logo"
+      src="assets/logo-ekora.jpg"
+      alt="EKORA Consultoria Ambiental"
+    >
+    <div class="header-title-block">
+      <div class="brand-sub">
+        EKORA Consultoria Ambiental · Bragagnoli Ambiental
+      </div>
+
+      <h1>
+        <svg class="ico ico-lg" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M11 20A7 7 0 0 1 4 13C4 8 9 4 20 4c0 11-4 16-9 16z"/>
+          <path d="M4 13C7 10 12 8 16 9"/>
+        </svg>
+        Dashboard de Monitoramento da Reposição Florestal
+      </h1>
+
+      <p>
+        Gestão de Ativos Ambientais · plantio compensatório ·
+        Empreendimento: <b>UFV Apolo Presidente Jânio Quadros — BA</b>
+        (Fazenda Caraíbas) · Mês de Referência:
+        <b>Outubro/2026</b> · Bragagnoli Ambiental (CTF/AIDA 8805586)
+      </p>
+
+      <div class="tag-row">
+        <span class="badge">
+          Diretor Técnico: Railson N. de Arruda — CREA-PB RNP 1619008858
+        </span>
+        <span class="badge">Área de Plantio: 0,1125 ha</span>
+        <span class="badge">125 mudas implantadas</span>
+        <span class="badge">UFV Apolo · Energia Fotovoltaica</span>
       </div>
     </div>
+  </div>
+
+  <div class="header-accent" aria-hidden="true">
+    <svg viewBox="0 0 24 24" stroke="#ffd26e" fill="none"
+         stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="5"/>
+      <line x1="12" y1="1" x2="12" y2="3"/>
+      <line x1="12" y1="21" x2="12" y2="23"/>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+      <line x1="1" y1="12" x2="3" y2="12"/>
+      <line x1="21" y1="12" x2="23" y2="12"/>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+    </svg>
+  </div>
+
+  <!-- Relógio e estado operacional -->
+  <div class="header-status">
+    <div class="hs-clock" id="hsClock">00:00:00</div>
+
+    <div class="hs-date" id="hsDate">
+      Carregando data...
+    </div>
+
+    <div class="hs-row">
+      <span class="hs-pill">
+        <span class="dot online"></span>
+        Online
+      </span>
+
+      <span class="hs-pill">
+        <span class="dot sync"></span>
+        Sinc. automática 60s
+      </span>
+    </div>
+  </div>
+</div>
     <div class="header-accent" aria-hidden="true">
       <svg viewBox="0 0 24 24" stroke="#ffd26e" fill="none" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
         <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
